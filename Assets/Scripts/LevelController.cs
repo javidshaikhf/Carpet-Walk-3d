@@ -24,5 +24,10 @@ public class LevelController : SingleOnScene<LevelController>
     {
         Application.Quit();
     }
+    
+    public void LoadFirstLevel()
+    {
+        SceneManager.LoadScene("1");
+    }
 
 }
