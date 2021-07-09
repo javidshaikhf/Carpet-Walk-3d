@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Blocker
   - EndLine
+  - carpet
   layers:
   - Default
   - TransparentFX
