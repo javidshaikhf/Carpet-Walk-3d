@@ -46,6 +46,7 @@ namespace PathCreation {
             if (carpetTransform != null)
             {
                 StartCoroutine(CreateWaypointsForBezeirCurve());
+                InitializeEditorData(false);
             }
             
         }

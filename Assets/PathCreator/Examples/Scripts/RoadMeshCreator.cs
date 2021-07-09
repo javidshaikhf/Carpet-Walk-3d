@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using PathCreation.Utility;
 using UnityEngine;
 
@@ -151,5 +152,40 @@ namespace PathCreation.Examples {
             }
         }
 
+        private void OnEnable()
+        {
+            if (TryFindPathCreator())
+            {
+                Subscribe();
+                TriggerUpdate();
+            }
+        }
+        
+        protected virtual void Subscribe()
+        {
+            if (pathCreator != null)
+            {
+                pathCreator.pathUpdated -= PathUpdated;
+                pathCreator.pathUpdated += PathUpdated;
+            }
+        }
+        
+        bool TryFindPathCreator()
+        {
+            // Try find a path creator in the scene, if one is not already assigned
+            if (pathCreator == null)
+            {
+                if (GetComponent<PathCreator>() != null)
+                {
+                    pathCreator = GetComponent<PathCreator>();
+                }
+                else if (FindObjectOfType<PathCreator>())
+                {
+                    pathCreator = FindObjectOfType<PathCreator>();
+                }
+            }
+            return pathCreator != null;
+        }
+        
     }
 }

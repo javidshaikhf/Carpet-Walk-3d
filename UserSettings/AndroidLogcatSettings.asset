@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "f1b1dae9",
         "name": "com.DefaultCompany.CarpetWalk3D",
-        "processId": 12030,
+        "processId": 12973,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -24,6 +24,18 @@
             "deviceId": "f1b1dae9",
             "name": "com.DefaultCompany.CarpetWalk3D",
             "processId": 12030,
+            "exited": true
+        },
+        {
+            "deviceId": "f1b1dae9",
+            "name": "com.DefaultCompany.CarpetWalk3D",
+            "processId": 12406,
+            "exited": true
+        },
+        {
+            "deviceId": "f1b1dae9",
+            "name": "com.DefaultCompany.CarpetWalk3D",
+            "processId": 12973,
             "exited": false
         }
     ],
